@@ -35,11 +35,12 @@ This section will introduce the various security options available to a Jenkins
 administrator, explaining the protections offered, and trade-offs to disabling
 some of them.
 
-
 == Enabling Security
 
-Beginning with Jenkins 2.214 and Jenkins LTS 2.222.1, the "Enable Security" checkbox has been removed.
-Jenkins own user database is used as the default security realm.
+Jenkins is installed with some basic security provisions. 
+Users can log in with a username and password in order to perform operations not available to anonymous users. 
+By default, logged-in users have full access to all Jenkins functionality and are managed using the "Jenkins own user database" security realm. 
+The default configuration also includes protections against many common threats.
 
 In versions before Jenkins 2.214 and Jenkins LTS 2.222.1, when the *Enable Security* checkbox is checked,
 users can log in with a username and password in order to
@@ -57,8 +58,7 @@ image::security/configure-global-security.png["Security", role=center]
 
 === TCP Port
 
-Jenkins can use a TCP port to communicate with inbound (formerly known as “JNLP”) agents,
-such as Windows-based agents.
+Jenkins can use a TCP port to communicate with inbound (formerly known as “JNLP”) agents, such as Windows-based agents.
 As of Jenkins 2.0, by default this port is disabled.
 
 For administrators wishing to use inbound TCP agents, the two port options are:
